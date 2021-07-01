@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --primaryColor: rgb(51, 89, 236);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+
+header {
+  padding-top: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--primaryColor);
+}
+.titulo {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.bloco-imagem {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  width: 32%;
+}
+.bloco-imagem .logo-blue {
+  width: 140px;
+  height: 90px;
+}
+
+.bloco-titulo {
+  width: 68%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bloco-titulo h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.bloco-botao {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.botao-header {
+  border: 1px solid var(--primaryColor);
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 5px;
+  padding: 15px 32px;
+  text-align: center;
+}
+
+.botao-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.busca {
+  border: 1px solid var(--primaryColor);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0 0 5px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.botao-busca {
+  border: 1px solid var(--primaryColor);
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  width: 50px;
+  cursor: pointer;
+  background-color: var(--primaryColor);
+}
