@@ -45,6 +45,7 @@ header {
 }
 
 .bloco-botao {
+  width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -76,6 +77,7 @@ header {
   margin: 0 0 0 5px;
   padding-left: 10px;
   outline: none;
+  width: 20%;
 }
 
 .botao-busca {

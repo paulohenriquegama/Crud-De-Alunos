@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db=SQLAlchemy(app)
 
-class Aluno(db.Model):
+class Alunos(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(150),nullable=False)
     sexo = db.Column(db.String)
@@ -45,7 +45,7 @@ def create():
 
     if request.method == "POST":
         form = request.form
-        aluno = Aluno(form['nome'],form['sexo'],form['email'],form['img_url'],form['contato'],form['descricao'])
+        aluno = Alunos(form['nome'],form['sexo'],form['email'],form['img_url'],form['contato'],form['descricao'])
         db.session.add(aluno)
         db.session.commit()
         return redirect(url_for('index.html'))
