@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,20 +12,31 @@
 
     <title>Document</title>
 </head>
+
 <body>
     {% include 'header.html' %}
+    {% if id_atribuido %}
+
+    <div class="bloco">
+        <p>
+            Registro criado com sucesso! <br>
+
+            <a href="/aluno/{{id_atribuido}}" class="botao"> Visualizar esse registro </a>
+        </p>
+    </div>
+    {% else %}
     <main>
-        <form action="/create" method="POST" enctype="multipart/form-data" class="form">
+        <form method="POST" enctype="multipart/form-data" class="form">
             <fieldset name="Cadastro de Alunos" class="fieldset">
                 <legend>Cadastro Alunos</legend>
                 <div class="bloco_campos">
                     <div class="bloco_form">
                         <label for="nome">Nome:
                             <br>
-                            <input type="text" name="nome" id="nome" autofocus required >
+                            <input type="text" name="nome" id="nome" autofocus required>
                         </label>
-                        
-                    </div>    
+
+                    </div>
                     <div class="bloco_form">
                         <fieldset class="sexo">
                             <legend>Sexo</legend>
@@ -45,11 +57,11 @@
                     <div class="bloco_form">
                         <label for="foto">Imagem Perfil:
                             <br>
-                            <input type="text" id="foto" name="foto">
+                            <input type="text" id="foto" name="img_url">
                         </label>
 
                     </div>
-                    
+
                     <div class="bloco_form">
                         <label for="contato">Contato:
                             <br>
@@ -60,11 +72,11 @@
                     <div class="bloco_form">
                         <label for="descricao">Fale um pouco sobre vc:
                             <br>
-                            <textarea name="" id="" cols="21.5" rows="5"></textarea>
+                            <textarea name="descricao" id="" cols="21.5" rows="5"></textarea>
                         </label>
 
                     </div>
-                    
+
                 </div>
                 <div class="bloco_botao">
                     <button class="botao_form" type="submit">Enviar</button>
@@ -74,6 +86,7 @@
 
         </form>
     </main>
-
+    {% endif %}
 </body>
+
 </html>

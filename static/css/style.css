@@ -68,7 +68,7 @@ header {
   text-align: center;
 }
 
-.botao-header a {
+.botao-header {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -103,7 +103,7 @@ header {
   display: inline-block;
   font-size: 16px;
   margin: 0 5px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
 }
