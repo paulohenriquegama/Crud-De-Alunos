@@ -15,22 +15,26 @@
 <body>
 
     {% include 'header.html' %}
+    <div class="container">
+        <div class="bloco-header">
+            <div class="imagem">
+                <img src="{{aluno.img_url}}" alt="{{aluno.nome}}">
+            </div>
+            <h2>{{aluno.nome}}</h2>
+            <div class="botoes">
+                <a href="#" class="botao"><i class="far fa-trash-alt"> </i></a></td>
+                <a href="#" id="edit"><i class="fas fa-user-edit"></i></a></td>
+            </div>
 
-    <div class="bloco-header">
-        <div class="imagem">
-            <img src="{{aluno.img_url}}" alt="{{aluno.nome}}">
         </div>
-        <h2>{{aluno.nome}}</h2>
-        <div class="delete">
-            <a href="#" class="botao"><i class="far fa-trash-alt"> </i></a></td>
-        </div>
-    </div>
 
-    <div class="info">
-        <p><strong>E-mail: </strong> {{aluno.email}}</p>
-        <p><strong>Sexo: </strong> {{aluno.sexo}}</p>
-        <p><strong>Contato: </strong> {{aluno.contato}}</p>
-        <p><strong>Descrição: </strong>{{aluno.descricao}}</p>
+        <div class="info">
+            <p><strong>E-mail: </strong> {{aluno.email}}</p>
+            <p><strong>Sexo: </strong> {{aluno.sexo}}</p>
+            <p><strong>Contato: </strong> {{aluno.contato}}</p>
+            <p><strong>Descrição: </strong>{{aluno.descricao}}</p>
+        </div>
+
     </div>
 </body>
 

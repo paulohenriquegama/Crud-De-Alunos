@@ -1,3 +1,10 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bloco-header {
   width: 75%;
   display: flex;
@@ -15,15 +22,19 @@
   font-size: 2rem;
 }
 
-.info {
-  width: 107%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .info p {
   font-size: 1.3rem;
+}
+
+#edit {
+  background-color: var(--primaryColor);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 10px 11px 10px 13px;
+  text-align: center;
 }
