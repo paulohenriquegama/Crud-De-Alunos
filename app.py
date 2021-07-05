@@ -1,6 +1,6 @@
 
 from threading import active_count
-from flask import Flask, render_template,request,url_for,redirect
+from flask import Flask, render_template, request, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
@@ -11,7 +11,6 @@ database = 'llfxwees'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user}:{password}@{host}/{database}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 
 
 db = SQLAlchemy(app)
@@ -26,7 +25,7 @@ class Alunos(db.Model):
     contato = db.Column(db.String(20))
     descricao = db.Column(db.String)
     ativo = db.Column(db.Boolean)
-    
+
     def __init__(self, nome, sexo, email, img_url, contato, descricao, ativo=True):
         self.nome = nome
         self.sexo = sexo
@@ -35,7 +34,7 @@ class Alunos(db.Model):
         self.contato = contato
         self.descricao = descricao
         self.ativo = ativo
-        
+
     @staticmethod
     def listar():
         return Alunos.query.all()
@@ -61,18 +60,20 @@ def aluno(aluno_id):
     aluno = Alunos.aluno(aluno_id)
     return render_template('aluno.html', aluno=aluno)
 
-@app.route('/criar', methods=['GET','POST'])
-def create():
 
+@app.route('/criar', methods=['GET', 'POST'])
+def create():
+    id_atribuido = None
     if request.method == "POST":
         form = request.form
         aluno = Alunos(form['nome'], form['sexo'], form['email'],
                        form['img_url'], form['contato'], form['descricao'])
         db.session.add(aluno)
         db.session.commit()
-        return redirect(url_for('index.html'))
+        id_atribuido = aluno.id
 
-    return render_template('create.html')
+    return render_template('create.html', id_atribuido=id_atribuido)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
