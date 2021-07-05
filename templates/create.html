@@ -15,49 +15,60 @@
     {% include 'header.html' %}
     <main>
         <form action="/create" method="POST" enctype="multipart/form-data" class="form">
-            <fieldset name="Cadastro de Alunos">
+            <fieldset name="Cadastro de Alunos" class="fieldset">
                 <legend>Cadastro Alunos</legend>
-                <label for="nome">Nome: 
-                    <input type="text" name="nome" id="nome" autofocus required >
-                </label>
-                <br>
-                <br>
+                <div class="bloco_campos">
+                    <div class="bloco_form">
+                        <label for="nome">Nome:
+                            <br>
+                            <input type="text" name="nome" id="nome" autofocus required >
+                        </label>
+                        
+                    </div>    
+                    <div class="bloco_form">
+                        <fieldset class="sexo">
+                            <legend>Sexo</legend>
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" name="sexo" id="masculino" value="Masculino">
+                            <label for="feminino">Feminino</label>
+                            <input type="radio" name="sexo" id="feminino" value="Feminino">
+                        </fieldset>
 
-                <fieldset class="sexo">
-                    <legend>Sexo</legend>
-                    <label for="masculino">Masculino
-                        <input type="radio" name="sexo" id="masculino" value="Masculino">
-                    </label>
-                    <label for="feminino">Femino
-                        <input type="radio" name="sexo" id="feminino" value="Feminino">
-                    </label>
-                </fieldset>
-                <br>
-                <br>
-                <label for="email">Email: 
-                    <input type="email" name="email" id="email">
-                </label>
-                <br>
-                <br>
-                <label for="foto">Imagem Perfil:
-                    <input type="text" id="foto" name="foto">
-                </label>
-                <br>
-                <br>
-                <label for="contato">Contato:
-                    <input type="text" name="contato" id="contato">
-                </label>
+                    </div>
+                    <div class="bloco_form">
+                        <label for="email">Email:
+                            <br>
+                            <input type="email" name="email" id="email">
+                        </label>
 
-                <br>
-                <br>
-                <br>
-                <label for="descricao">Fale um pouco sobre vc:
-                    <br>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </label>
+                    </div>
+                    <div class="bloco_form">
+                        <label for="foto">Imagem Perfil:
+                            <br>
+                            <input type="text" id="foto" name="foto">
+                        </label>
+
+                    </div>
+                    
+                    <div class="bloco_form">
+                        <label for="contato">Contato:
+                            <br>
+                            <input type="text" name="contato" id="contato">
+                        </label>
+
+                    </div>
+                    <div class="bloco_form">
+                        <label for="descricao">Fale um pouco sobre vc:
+                            <br>
+                            <textarea name="" id="" cols="21.5" rows="5"></textarea>
+                        </label>
+
+                    </div>
+                    
+                </div>
                 <div class="bloco_botao">
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Limpar</button>
+                    <button class="botao_form" type="submit">Enviar</button>
+                    <button class="botao_form" type="reset">Limpar</button>
                 </div>
             </fieldset>
 
