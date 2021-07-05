@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
-from flask import Flask, render_template
-app = Flask(__name__)
 
-=======
 from threading import active_count
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template,request,url_for,redirect
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
@@ -15,6 +11,7 @@ database = 'llfxwees'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user}:{password}@{host}/{database}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
 db = SQLAlchemy(app)
 
@@ -28,7 +25,7 @@ class Alunos(db.Model):
     contato = db.Column(db.String(20))
     descricao = db.Column(db.String)
     ativo = db.Column(db.Boolean)
-
+    
     def __init__(self, nome, sexo, email, img_url, contato, descricao, ativo=True):
         self.nome = nome
         self.sexo = sexo
@@ -37,25 +34,20 @@ class Alunos(db.Model):
         self.contato = contato
         self.descricao = descricao
         self.ativo = ativo
-
+        
     @staticmethod
     def listar():
-
         return Alunos.query.all()
 
     @staticmethod
     def aluno(aluno_id):
-
         return Alunos.query.get(aluno_id)
 
->>>>>>> Stashed changes
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-<<<<<<< Updated upstream
-=======
 
 @app.route('/listar')
 def listar():
@@ -68,8 +60,7 @@ def aluno(aluno_id):
     aluno = Alunos.aluno(aluno_id)
     return render_template('aluno.html', aluno=aluno)
 
-
-@app.route('/criar', methods=['GET', 'POST'])
+@app.route('/criar', methods=['GET','POST'])
 def create():
 
     if request.method == "POST":
@@ -81,8 +72,6 @@ def create():
         return redirect(url_for('index.html'))
 
     return render_template('create.html')
->>>>>>> Stashed changes
-
 
 if __name__ == '__main__':
     app.run(debug=True)
