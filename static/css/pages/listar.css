@@ -1,0 +1,26 @@
+.tabela {
+  border: 1px solid #bababa;
+  border-spacing: 0;
+  margin: 0 auto 20px;
+  width: 90%;
+}
+
+.bloco h2 {
+  font-size: 2rem;
+}
+
+.tabela td,
+.tabela th {
+  padding: 10px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #bababa;
+}
+
+.tabela_header th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabela_children td {
+  text-align: center;
+}
