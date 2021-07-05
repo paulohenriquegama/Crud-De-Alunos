@@ -1,0 +1,29 @@
+.bloco-header {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.bloco-header .imagem img {
+  max-height: 150px;
+  border-radius: 50%;
+}
+
+.bloco-header h2 {
+  font-size: 2rem;
+}
+
+.info {
+  width: 107%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info p {
+  font-size: 1.3rem;
+}
