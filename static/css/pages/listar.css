@@ -12,23 +12,19 @@
 
 #tabela td,
 #tabela th {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-bottom: 1px solid #bababa;
 }
 
 .tabela_header th {
   font-weight: bold;
   text-align: center;
+  width: 16.6%;
 }
-
-td {
+.tabela_children td {
   text-align: center;
-  font-size: 0.8rem;
-  align-items: center;
+  width: 5%;
 }
-
 #tabela td .botao {
   display: flex;
   justify-content: center;

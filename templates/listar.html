@@ -23,7 +23,7 @@
         <table id="tabela">
             <thead>
                 <tr id="filtro">
-                    <th><input id="busca" type="text" placeholder="Buscar aluno..."></th>
+                    <th><input id="busca" type="text" placeholder="Buscar nome aluno..."></th>
                 </tr>
                 <tr class="tabela_header">
                     <th>ID</th>
@@ -39,12 +39,12 @@
             <tbody>
                 {% for aluno in alunos %}
 
-                <tr>
+                <tr class="tabela_children">
                     <td> {{aluno.id}} </td>
                     <td> {{aluno.nome}} </td>
-                    <td>{{aluno.sexo}}</td>
-                    <td>{{aluno.email}}</td>
-                    <td>{{aluno.contato}}</td>
+                    <td> {{aluno.sexo}} </td>
+                    <td> {{aluno.email}} </td>
+                    <td> {{aluno.contato}} </td>
                     <td>
                         <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search"> </i></a>
                         <a href="/delete/{{aluno.id}}" class="botao"><i class="far fa-trash-alt"> </i></a>

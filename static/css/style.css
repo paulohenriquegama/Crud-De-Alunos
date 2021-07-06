@@ -74,9 +74,13 @@ body {
   align-content: center;
 }
 
-.busca {
+#busca {
+  margin: 10px;
   border: 1px solid var(--primaryColor);
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  width: 120px;
 }
 .botao-busca {
   border: 1px solid var(--primaryColor);
