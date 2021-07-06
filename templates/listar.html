@@ -38,9 +38,9 @@
                 <td>{{aluno.sexo}}</td>
                 <td>{{aluno.email}}</td>
                 <td>{{aluno.contato}}</td>
-                <td id="acoes"> 
+                <td> 
                     <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search"> </i></a> 
-                    <a href="#" class="botao"><i class="far fa-trash-alt"> </i></a>
+                    <a href="/delete/{{aluno.id}}" class="botao"><i class="far fa-trash-alt"> </i></a>
                 </td>
             </tr>
             {% endfor %}

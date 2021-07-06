@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo Blue - HTML + Python</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="stylesheet" href="/static/css/pages/delete.css" />
+</head>
+
+<body>
+    {% include 'header.html' %} {% if sucesso %}
+
+    <div class="bloco removido_sucesso">
+        <p>Aluno removido com sucesso!</p>
+    </div>
+
+    <div class="bloco">
+        <a href="/listar" class="botao">Visualizar todos os alunos</a>
+    </div>
+
+    {% elif alunos %}
+
+    <div class="bloco">
+        <h2>Remover Aluno</h2>
+    </div>
+
+    <div class="bloco">
+        <p>
+            Tem certeza que deseja remover o aluno
+            <span class="highlight">{{ alunos.nome }}</span>?<br />
+            <br />
+            <a href="/delete/{{ alunos.id }}/confirmed" class="botao">Remover</a>
+            <a href="/listar" class="botao">Cancelar</a>
+        </p>
+    </div>
+
+    {% else %}
+
+    <div class="bloco">
+        <h2>Remover Aluno</h2>
+    </div>
+
+    <div class="bloco">
+        <p>
+            Nenhum aluno foi encontrado.<br />
+            <br />
+            <a href="/listar" class="botao">Voltar para lista de alunos</a>
+        </p>
+    </div>
+
+    {% endif %}
+
+</body>
+
+</html>
