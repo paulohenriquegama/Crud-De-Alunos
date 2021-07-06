@@ -60,6 +60,22 @@ def aluno(aluno_id):
     aluno = Alunos.aluno(aluno_id)
     return render_template('aluno.html', aluno=aluno)
 
+@app.route('/alterar/<aluno_id>', methods= ['GET','POST'])
+def alterar(aluno_id):
+    alterado = None
+    aluno = Alunos.query.get(aluno_id)
+    if request.method == 'POST':
+        form = request.form
+        aluno.nome = form['nome']
+        aluno.sexo = form['sexo']
+        aluno.email = form['email']
+        aluno.img_url = form['img_url']
+        aluno.contato = form['contato']
+        aluno.descricao = form['descricao']
+        db.session.commit()
+        alterado = aluno.id
+        return render_template('alterar.html', alterado=alterado)
+    return render_template('alterar.html', aluno=aluno)
 
 @app.route('/criar', methods=['GET', 'POST'])
 def create():

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/pages/create.css">
+    <link rel="stylesheet" href="/static/css/pages/alterar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
@@ -15,48 +16,43 @@
 
 <body>
     {% include 'header.html' %}
-    {% if id_atribuido %}
+    {% if alterado %}
 
     <div class="bloco_sucesso">
         <p class="alterado_sucesso">
-            Registro criado com sucesso! <br>
+            Alteração realizada com sucesso! <br>
         </p>
-        <a href="/aluno/{{id_atribuido}}" class="botao"> Visualizar esse registro </a>
+        <a href="/aluno/{{alterado}}" class="botao"> Visualizar esse registro </a>
     </div>
     {% else %}
     <main>
-        <form method="POST" enctype="multipart/form-data" class="form">
-            <fieldset name="Cadastro de Alunos" class="fieldset">
-                <legend>Cadastro Alunos</legend>
+        <form action="/alterar/{{aluno.id}}" method="POST" enctype="multipart/form-data" class="form">
+            <h2>{{aluno.nome}}</h2>
+            <fieldset name="Alterar Cadastro" class="fieldset">
+                <legend><b>Editar Aluno</b> </legend>
                 <div class="bloco_campos">
                     <div class="bloco_form">
                         <label for="nome">Nome:
                             <br>
-                            <input type="text" name="nome" id="nome" autofocus required>
+                            <input type="text" name="nome" id="nome" autofocus required value="{{aluno.nome}}">
                         </label>
 
                     </div>
                     <div class="bloco_form">
-                        <fieldset class="sexo">
-                            <legend>Sexo</legend>
-                            <label for="masculino">Masculino</label>
-                            <input type="radio" name="sexo" id="masculino" value="Masculino">
-                            <label for="feminino">Feminino</label>
-                            <input type="radio" name="sexo" id="feminino" value="Feminino">
-                        </fieldset>
-
+                            <label for="sexo">Feminino</label>
+                            <input type="text" name="sexo" id="feminino" value="{{aluno.sexo}}">
                     </div>
                     <div class="bloco_form">
                         <label for="email">Email:
                             <br>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" value="{{aluno.email}}">
                         </label>
 
                     </div>
                     <div class="bloco_form">
                         <label for="foto">Imagem Perfil:
                             <br>
-                            <input type="text" id="foto" name="img_url">
+                            <input type="text" id="foto" name="img_url" value="{{aluno.img_url}}">
                         </label>
 
                     </div>
@@ -64,14 +60,14 @@
                     <div class="bloco_form">
                         <label for="contato">Contato:
                             <br>
-                            <input type="text" name="contato" id="contato">
+                            <input type="text" name="contato" id="contato" value="{{aluno.contato}}">
                         </label>
 
                     </div>
                     <div class="bloco_form">
                         <label for="descricao">Fale um pouco sobre vc:
                             <br>
-                            <textarea name="descricao" id="descricao" cols="21.5" rows="5"></textarea>
+                            <textarea name="descricao" id="" cols="21.5" rows="5">{{aluno.descricao}}</textarea>
                         </label>
 
                     </div>

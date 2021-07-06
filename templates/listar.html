@@ -38,8 +38,10 @@
                 <td>{{aluno.sexo}}</td>
                 <td>{{aluno.email}}</td>
                 <td>{{aluno.contato}}</td>
-                <td> <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search"> </i></a> <a href="#"
-                        class="botao"><i class="far fa-trash-alt"> </i></a></td>
+                <td id="acoes"> 
+                    <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search"> </i></a> 
+                    <a href="#" class="botao"><i class="far fa-trash-alt"> </i></a>
+                </td>
             </tr>
             {% endfor %}
         </table>
