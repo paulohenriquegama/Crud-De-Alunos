@@ -75,5 +75,26 @@ def create():
     return render_template('create.html', id_atribuido=id_atribuido)
 
 
+@app.route('/delete/<aluno_id>')
+def delete(aluno_id):
+    alunos = Alunos.aluno(aluno_id)
+
+    return render_template('deletar.html', alunos=alunos)
+
+
+@app.route('/delete/<aluno_id>/confirmed')
+def delete_confirmed(aluno_id):
+    sucesso = None
+
+    alunos = Alunos.aluno(aluno_id)
+
+    if alunos:
+        db.session.delete(alunos)
+        db.session.commit()
+        sucesso = True
+
+    return render_template('deletar.html', alunos=alunos, aluno_id=aluno_id, sucesso=sucesso)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
