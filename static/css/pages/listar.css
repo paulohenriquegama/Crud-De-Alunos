@@ -1,4 +1,4 @@
-.tabela {
+#tabela {
   border: 1px solid #bababa;
   border-spacing: 0;
   margin: 0 auto 20px;
@@ -10,8 +10,8 @@
   font-size: 2rem;
 }
 
-.tabela td,
-.tabela th {
+#tabela td,
+#tabela th {
   width: 100%;
   padding: 10px;
   font-size: 1.3rem;
@@ -23,13 +23,13 @@
   text-align: center;
 }
 
-.tabela_children td {
+td {
   text-align: center;
   font-size: 0.8rem;
   align-items: center;
 }
 
-.tabela td .botao{
+#tabela td .botao {
   display: flex;
   justify-content: center;
   max-width: 10px;
@@ -37,4 +37,9 @@
   border-radius: 5px;
   align-items: center;
   margin: 5px auto;
+}
+
+#filtro th {
+  border: none;
+  text-align: center;
 }
