@@ -6,11 +6,13 @@
 }
 
 .bloco h2 {
+  text-align: center;
   font-size: 2rem;
 }
 
 .tabela td,
 .tabela th {
+  width: 100%;
   padding: 10px;
   font-size: 1.3rem;
   border-bottom: 1px solid #bababa;
@@ -23,5 +25,16 @@
 
 .tabela_children td {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.tabela td .botao{
+  display: flex;
+  justify-content: center;
+  max-width: 10px;
+  max-height: 10px;
+  border-radius: 5px;
+  align-items: center;
+  margin: 5px auto;
 }
