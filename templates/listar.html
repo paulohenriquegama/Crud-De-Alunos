@@ -18,34 +18,43 @@
     <div class="bloco">
         <h2> Visualizar todos os registros</h2>
     </div>
-
     <div>
-        <table class="tabela">
-            <tr class="tabela_header">
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Sexo</th>
-                <th>E-mail</th>
-                <th>Contato</th>
-                <th>Ações</th>
-            </tr>
+        <table id="tabela">
+            <thead>
+                <tr id="filtro">
+                    <th><input id="busca" type="text" placeholder="Buscar nome aluno..."></th>
+                </tr>
+                <tr class="tabela_header">
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th class="email">E-mail</th>
+                    <th>Contato</th>
+                    <th>Ações</th>
+                </tr>
 
-            {% for aluno in alunos %}
+            </thead>
 
-            <tr class="tabela_children">
-                <td> {{aluno.id}} </td>
-                <td> {{aluno.nome}} </td>
-                <td>{{aluno.sexo}}</td>
-                <td>{{aluno.email}}</td>
-                <td>{{aluno.contato}}</td>
-                <td> 
-                    <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search"> </i></a> 
-                    <a href="/delete/{{aluno.id}}" class="botao"><i class="far fa-trash-alt"> </i></a>
-                </td>
-            </tr>
-            {% endfor %}
+            <tbody>
+                {% for aluno in alunos %}
+
+                <tr class="tabela_children">
+                    <td> {{aluno.id}} </td>
+                    <td> {{aluno.nome}} </td>
+                    <td> {{aluno.sexo}} </td>
+                    <td class="email"> {{aluno.email}} </td>
+                    <td> {{aluno.contato}} </td>
+                    <td>
+                        <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search fa-xs"> </i></a>
+                        <a href="/delete/{{aluno.id}}" class="botao"><i class="far fa-trash-alt fa-xs"> </i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../static/script/script.js"></script>
 </body>
 
 </html>

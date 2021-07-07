@@ -8,8 +8,8 @@
 .bloco-header {
   width: 90%;
   display: flex;
-  justify-content: space-between;
-  margin: 30px auto;
+  justify-content: space-around;
+  margin: 3rem auto;
   align-items: center;
 }
 
@@ -26,18 +26,16 @@
   font-size: 1.3rem;
 }
 
-#excluir{
+#excluir {
   background-color: var(--primaryColor);
   border: none;
   border-radius: 10px;
   color: black;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
   margin: 0 5px;
   padding: 10px 14px 10px 14px;
   text-align: center;
-
 }
 
 #edit {
@@ -47,8 +45,29 @@
   color: black;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
   margin: 0 5px;
   padding: 10px 11px 10px 13px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .bloco-header .imagem img {
+    max-height: 3.75rem;
+  }
+  .bloco-header h2 {
+    font-size: 0.8rem;
+  }
+  #excluir {
+    max-width: 13px;
+    max-height: 13px;
+    padding: 10px;
+  }
+  #edit {
+    max-width: 13px;
+    max-height: 13px;
+    padding: 10px;
+  }
+  .info p {
+    font-size: 0.8rem;
+  }
 }

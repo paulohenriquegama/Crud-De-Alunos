@@ -1,55 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
 :root {
   --primaryColor: rgb(51, 89, 236);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   font-size: 62.5%;
+}
+
+.bloco {
+  text-align: center;
 }
 
 .header {
   width: 100%;
   padding-top: 5px;
-  background-color: #fff;
   border-bottom: 1px solid var(--primaryColor);
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
-.logo-blue{
+.logo-blue {
   max-width: 150px;
   max-height: 90px;
-
 }
 
-.titulo{
-  
+.titulo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: center;
-  
+
+  width: 100%;
 }
 
-.bloco-imagem{
+.bloco-imagem {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-
+  justify-content: flex-start;
 }
 
-.bloco-titulo{
+.bloco-titulo {
   font-size: 1.2rem;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-  
   text-align: center;
 }
-.bloco-botao{
+.bloco-botao {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -57,40 +57,30 @@ body {
   align-content: center;
 }
 
-.bloco_botao{
+.bloco_botao {
   display: flex;
   justify-content: flex-end;
   margin-top: 5px;
-  
 }
-.botao-header{
+.botao-header {
   margin: 0 10px;
-  
 }
-.botao-header button{
+.botao-header button {
   border: 1px solid var(--primaryColor);
   border-radius: 10px;
   padding: 10px 25px;
+  cursor: pointer;
 }
 
-.bloco_busca{
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
-  align-content: center;
-}
-
-.busca{
- border: 1px solid var(--primaryColor);
- border-radius: 10px 0 0 10px;
-}
-.botao-busca{
+#busca {
+  margin: 10px;
   border: 1px solid var(--primaryColor);
-  border-radius: 0 10px 10px 0;
-  background-color: var(--primaryColor);
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  width: 12rem;
 }
-
-.botao{
+.botao {
   text-decoration: none;
   border: 1px solid var(--primaryColor);
   border-radius: 10px;
@@ -102,20 +92,30 @@ body {
   margin-top: 5px;
 }
 
-.bloco_sucesso{
+.bloco_sucesso {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.alterado_sucesso{
+.alterado_sucesso {
   font-size: 1rem;
   text-align: center;
   width: 100%;
   background-color: lightgreen;
   margin-bottom: 10px;
-  
 }
 
-.bloco_sucesso a{
+.bloco_sucesso a {
   max-width: 200px;
+}
+
+@media (max-width: 600px) {
+  .bloco-titulo h1 {
+    font-size: 2rem;
+  }
+
+  #busca {
+    font-size: 0.6rem;
+    width: 5rem;
+  }
 }
