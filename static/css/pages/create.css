@@ -1,58 +1,76 @@
-* {
-  margin: 0;
-  padding: 0;
+*{
+    margin: 0;
+    padding: 0;
 }
-main {
-  width: 100%;
-}
-
-.form {
-  max-width: 25%;
-  margin: 5px auto;
-}
-.fieldset {
-  border-color: var(--primaryColor);
-  border-width: 2px;
-  border-style: double;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
+main{
+    width: 100%;
+    
 }
 
-.sexo {
-  width: 93%;
-  display: flex;
-  justify-content: baseline;
+.form{
+    max-width: 25%;
+    margin: 5px auto;
+    
 }
-.bloco_campos {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.bloco_form {
-  margin: 0 auto;
-  border-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.fieldset{
+    border-color: var(--primaryColor);
+    border-width: 2px;
+    border-style: double;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
 }
 
-.bloco_botao {
-  max-width: 80%;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
+.sexo{
+    width: 100%;
+    display: flex;
+    justify-content:baseline;
+    
+   
+}
+.bloco_campos{
+    max-width: 90%;
+    margin: 0 auto;
+    
 }
 
-.botao_form {
-  border-color: var(--primaryColor);
-  background-color: var(--primaryColor);
-  border-radius: 10px;
-  padding: 2px;
-  margin: 10px 20px;
-  cursor: pointer;
+.bloco_form{
+    margin: 0 auto;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+
+.bloco_botao{
+    max-width: 80%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    
+}
+
+.botao_form{
+    border-color: var(--primaryColor);
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    padding: 2px;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+<<<<<<< Updated upstream
+input{
+    width: 100%;
+}
+=======
+#descricao {
+  width: 95%;
 }
 
 input {
@@ -63,3 +81,16 @@ textarea {
   outline: none;
   padding: 5px;
 }
+
+@media (max-width: 600px) {
+  .form {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 280px) {
+  .form {
+    max-width: 60%;
+  }
+}
+>>>>>>> Stashed changes
