@@ -17,4 +17,6 @@ $(function(){
     }); 
 });
 
-
+function alerta(){
+    alert('NÃO RECOMENDADO USAR ESSE SITE EM IPAD, CASO USE IPAD APRIMORAR PARA O IPAD PRO')
+}
