@@ -1,4 +1,4 @@
-.tabela {
+#tabela {
   border: 1px solid #bababa;
   border-spacing: 0;
   margin: 0 auto 20px;
@@ -10,13 +10,6 @@
   font-size: 2rem;
 }
 
-<<<<<<< Updated upstream
-.tabela td,
-.tabela th {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.3rem;
-=======
 .tabela_header,
 .tabela_children {
   width: 100%;
@@ -25,13 +18,13 @@
 #tabela td,
 #tabela th {
   font-size: 1rem;
->>>>>>> Stashed changes
   border-bottom: 1px solid #bababa;
 }
 
 .tabela_header th {
   font-weight: bold;
   text-align: center;
+  width: 16.6%;
 }
 
 .tabela_children td {
@@ -40,7 +33,7 @@
   align-items: center;
 }
 
-.tabela td .botao{
+#tabela td .botao {
   display: flex;
   justify-content: center;
   max-width: 10px;
@@ -48,9 +41,6 @@
   border-radius: 5px;
   align-items: center;
   margin: 5px auto;
-<<<<<<< Updated upstream
-}
-=======
 }
 
 #filtro th {
@@ -91,4 +81,3 @@
     display: none;
   }
 }
->>>>>>> Stashed changes
