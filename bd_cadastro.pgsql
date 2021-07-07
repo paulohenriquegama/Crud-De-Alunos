@@ -11,7 +11,7 @@
 -- )
 
 
--- INSERT INTO alunos (nome,sexo,email,img_url,contato,descricao) values('Gertrudes Goveiá', 'feminino','gertrudes@gmail.com', 'https://bit.ly/3yrYhZ9','31988557424','Charme e elegancia é o que me define');
+--INSERT INTO alunos (nome,sexo,email,img_url,contato,descricao) values('Gertrudes Goveiá', 'feminino','gertrudes@gmail.com', 'https://bit.ly/3yrYhZ9','31988557424','Charme e elegancia é o que me define');
 
 -- INSERT INTO alunos (nome,sexo,email,img_url,contato,descricao) values('Magda Serrando', 'feminino','magda@gmail.com', 'https://bit.ly/3hjx83i','31988557424','Inteligencia e destreza são o meu ponto forte.');
 
