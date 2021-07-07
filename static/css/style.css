@@ -1,26 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
+
 :root {
   --primaryColor: rgb(51, 89, 236);
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   font-size: 62.5%;
-}
-
-.bloco {
-  text-align: center;
 }
 
 .header {
   width: 100%;
   padding-top: 5px;
+  background-color: #fff;
   border-bottom: 1px solid var(--primaryColor);
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
@@ -35,35 +30,23 @@ body {
   
   display: flex;
   flex-wrap: wrap;
-<<<<<<< Updated upstream
   justify-content: space-evenly;
   align-content: center;
   
-=======
-
-  width: 100%;
->>>>>>> Stashed changes
 }
 
 .bloco-imagem{
   display: flex;
   flex-wrap: wrap;
-<<<<<<< Updated upstream
   justify-content: center;
 
-=======
-  justify-content: flex-start;
->>>>>>> Stashed changes
 }
 
 .bloco-titulo{
   font-size: 1.2rem;
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
-<<<<<<< Updated upstream
   
-=======
->>>>>>> Stashed changes
   text-align: center;
 }
 .bloco-botao{
@@ -88,7 +71,6 @@ body {
   border: 1px solid var(--primaryColor);
   border-radius: 10px;
   padding: 10px 25px;
-<<<<<<< Updated upstream
 }
 
 .bloco_busca{
@@ -109,20 +91,6 @@ body {
 }
 
 .botao{
-=======
-  cursor: pointer;
-}
-
-#busca {
-  margin: 10px;
-  border: 1px solid var(--primaryColor);
-  border-radius: 10px;
-  padding: 5px;
-  outline: none;
-  width: 12rem;
-}
-.botao {
->>>>>>> Stashed changes
   text-decoration: none;
   border: 1px solid var(--primaryColor);
   border-radius: 10px;
@@ -150,19 +118,4 @@ body {
 
 .bloco_sucesso a{
   max-width: 200px;
-<<<<<<< Updated upstream
 }
-=======
-}
-
-@media (max-width: 600px) {
-  .bloco-titulo h1 {
-    font-size: 2rem;
-  }
-
-  #busca {
-    font-size: 0.6rem;
-    width: 5rem;
-  }
-}
->>>>>>> Stashed changes

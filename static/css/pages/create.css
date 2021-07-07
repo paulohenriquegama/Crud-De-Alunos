@@ -64,33 +64,6 @@ main{
     cursor: pointer;
 }
 
-<<<<<<< Updated upstream
 input{
     width: 100%;
 }
-=======
-#descricao {
-  width: 95%;
-}
-
-input {
-  width: 100%;
-  outline: none;
-}
-textarea {
-  outline: none;
-  padding: 5px;
-}
-
-@media (max-width: 600px) {
-  .form {
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 280px) {
-  .form {
-    max-width: 60%;
-  }
-}
->>>>>>> Stashed changes
