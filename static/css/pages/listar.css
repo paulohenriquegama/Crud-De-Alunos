@@ -10,11 +10,22 @@
   font-size: 2rem;
 }
 
+<<<<<<< Updated upstream
 .tabela td,
 .tabela th {
   width: 100%;
   padding: 10px;
   font-size: 1.3rem;
+=======
+.tabela_header,
+.tabela_children {
+  width: 100%;
+}
+
+#tabela td,
+#tabela th {
+  font-size: 1rem;
+>>>>>>> Stashed changes
   border-bottom: 1px solid #bababa;
 }
 
@@ -37,4 +48,47 @@
   border-radius: 5px;
   align-items: center;
   margin: 5px auto;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+#filtro th {
+  border: none;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .bloco h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  #tabela td,
+  #tabela th {
+    font-size: 0.6rem;
+  }
+
+  #tabela {
+    width: 80%;
+  }
+
+  #tabela td .botao {
+    max-width: 2px;
+    max-height: 2px;
+    padding: 5px;
+  }
+
+  #filtro th {
+    max-width: 30px;
+  }
+
+  .tabela_header th {
+    width: 16%;
+  }
+  .email {
+    display: none;
+  }
+}
+>>>>>>> Stashed changes
