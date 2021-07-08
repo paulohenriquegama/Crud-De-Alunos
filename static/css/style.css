@@ -133,26 +133,25 @@ body {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  
   width: 100%;
   padding: 0.6rem 0;
   font-size: clamp(0.6rem, 2vw, 1rem);
   border-top: 1px solid var(--primaryColor);
   text-align: center;
-  overflow: hidden;
 }
 
 @media (min-width: 2000px) {
   .bloco-titulo {
     font-size: 2rem;
-    justify-content:center
+    
   }
 }
 
 @media (max-width: 600px) {
   .bloco-titulo {
     width: 100%;
+    justify-content:center
   }
   .bloco-imagem {
     width: 100%;
