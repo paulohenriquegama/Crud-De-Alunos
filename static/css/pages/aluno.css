@@ -67,3 +67,8 @@
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 390px) {
+  #excluir {
+   margin-bottom: 5px;
+  }
