@@ -1,9 +1,4 @@
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .bloco-header {
   width: 90%;
@@ -20,6 +15,7 @@
 
 .bloco-header h2 {
   font-size: 2rem;
+  text-align: center;
 }
 
 .info p {
@@ -50,7 +46,7 @@
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 835px) {
   .bloco-header .imagem img {
     max-height: 3.75rem;
   }
