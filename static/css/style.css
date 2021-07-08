@@ -131,6 +131,9 @@ body {
 .bloco_sucesso a {
   max-width: 200px;
 }
+.welcome{
+  margin: 1rem;
+}
 
 footer {
   
