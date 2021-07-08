@@ -54,11 +54,7 @@ body {
 }
 
 .bloco-titulo {
-<<<<<<< Updated upstream
   font-size: clamp(1.5rem,2.5vw,3rem);
-=======
-  font-size: 2rem;
->>>>>>> Stashed changes
   display: grid;
   flex-wrap: wrap;
   justify-content: flex-start;

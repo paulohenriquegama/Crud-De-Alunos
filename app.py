@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
-<<<<<<< Updated upstream
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -15,17 +14,6 @@ database = os.environ.get("database")
 
 app = Flask(__name__)
 
-=======
-from os.path import join, dirname
-from dotenv import load_dotenv
-
-dotenv_path = join(dirname(__file__),'.env')
-load_dotenv(dotenv_path)
-
-app = Flask(__name__)
-
-
->>>>>>> Stashed changes
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user}:{password}@{host}/{database}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
