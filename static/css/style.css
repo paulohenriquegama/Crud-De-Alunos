@@ -146,6 +146,7 @@ footer {
 @media (min-width: 2000px) {
   .bloco-titulo {
     font-size: 2rem;
+    justify-content:center
   }
 }
 
