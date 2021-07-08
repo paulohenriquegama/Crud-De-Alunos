@@ -20,44 +20,45 @@
 
     <div class="cotainer"></div>
 
-        <div class="bloco">
-            <h2> Visualizar todos os registros</h2>
-        </div>
-        <div>
-            <table id="tabela">
-                <thead>
-                    <tr id="filtro">
-                        <th><input id="busca" type="text" placeholder="Buscar nome aluno..."></th>
-                    </tr>
-                    <tr class="tabela_header">
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Sexo</th>
-                        <th class="email">E-mail</th>
-                        <th>Contato</th>
-                        <th>Ações</th>
-                    </tr>
+    <div class="bloco">
+        <h2> Visualizar todos os registros</h2>
+    </div>
+    <div>
+        <table id="tabela">
+            <thead>
+                <tr id="filtro">
+                    <th><input id="busca" type="text" placeholder="Buscar nome aluno..."></th>
+                </tr>
+                <tr class="tabela_header">
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th class="email">E-mail</th>
+                    <th>Contato</th>
+                    <th>Ações</th>
+                </tr>
 
-                </thead>
+            </thead>
 
-                <tbody>
-                    {% for aluno in alunos %}
+            <tbody>
+                {% for aluno in alunos %}
 
-                    <tr class="tabela_children">
-                        <td> {{aluno.id}} </td>
-                        <td> {{aluno.nome}} </td>
-                        <td> {{aluno.sexo}} </td>
-                        <td class="email"> {{aluno.email}} </td>
-                        <td> {{aluno.contato}} </td>
-                        <td>
-                            <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search fa-xs"> </i></a>
-                            <a href="/delete/{{aluno.id}}" class="botao"><i class="far fa-trash-alt fa-xs"> </i></a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                <tr class="tabela_children">
+                    <td> {{aluno.id}} </td>
+                    <td> {{aluno.nome}} </td>
+                    <td> {{aluno.sexo}} </td>
+                    <td class="email"> {{aluno.email}} </td>
+                    <td> {{aluno.contato}} </td>
+                    <td>
+                        <a href="/aluno/{{aluno.id}}" class="botao"><i class="fas fa-search fa-xs"> </i></a>
+                        <a href="/delete/{{aluno.id}}" class="botao"><i class="far fa-trash-alt fa-xs"> </i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% include 'footer.html' %}
     <script type="text/javascript" src="../static/script/jquery.js"></script>
     <script type="text/javascript" src="../static/script/script.js"></script>
 </body>

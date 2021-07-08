@@ -80,6 +80,12 @@ body {
   border-radius: 10px;
   padding: 10px 25px;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.botao-header button:hover {
+  background-color: var(--primaryColor);
+  color: white;
 }
 
 #busca {
@@ -96,12 +102,16 @@ body {
   border-radius: 10px;
   padding: 5px 10px;
   background-color: var(--primaryColor);
-  color: black;
+  color: white;
   font-size: 0.8rem;
   font-weight: 400;
   margin-top: 5px;
+  transition: ease-in-out 0.5s;
 }
-
+.botao:hover {
+  background-color: white;
+  color: black;
+}
 .bloco_sucesso {
   display: flex;
   flex-direction: column;
@@ -117,6 +127,23 @@ body {
 
 .bloco_sucesso a {
   max-width: 200px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.6rem 0;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  border-top: 1px solid var(--primaryColor);
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 2000px) {
+  .bloco-titulo {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 600px) {

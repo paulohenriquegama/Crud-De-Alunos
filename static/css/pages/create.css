@@ -50,9 +50,16 @@ main {
   border-color: var(--primaryColor);
   background-color: var(--primaryColor);
   border-radius: 10px;
+  color: white;
   padding: 2px;
   margin: 10px 20px;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.botao_form:hover {
+  background-color: white;
+  color: black;
 }
 
 #descricao {
