@@ -1,13 +1,19 @@
-
-from threading import active_count
 from flask import Flask, render_template, request, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+user = os.environ.get("user")
+password = os.environ.get("password")
+host = os.environ.get("host")
+database = os.environ.get("database")
+
 app = Flask(__name__)
 
-user = 'llfxwees'
-password = 'QF7I9SRL2Fmh48-sT89sy4rz7dZHaNE3'
-host = 'tuffi.db.elephantsql.com'
-database = 'llfxwees'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user}:{password}@{host}/{database}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -60,7 +66,8 @@ def aluno(aluno_id):
     aluno = Alunos.aluno(aluno_id)
     return render_template('aluno.html', aluno=aluno)
 
-@app.route('/alterar/<aluno_id>', methods= ['GET','POST'])
+
+@app.route('/alterar/<aluno_id>', methods=['GET', 'POST'])
 def alterar(aluno_id):
     alterado = None
     aluno = Alunos.query.get(aluno_id)
@@ -76,6 +83,7 @@ def alterar(aluno_id):
         alterado = aluno.id
         return render_template('alterar.html', alterado=alterado)
     return render_template('alterar.html', aluno=aluno)
+
 
 @app.route('/criar', methods=['GET', 'POST'])
 def create():
