@@ -26,7 +26,7 @@ body {
 
 .header {
   width: 100%;
-  padding-top: 5px;
+  padding-top: 0.5rem;
   border-bottom: 1px solid var(--primaryColor);
   display: flex;
   flex-wrap: wrap;
@@ -34,8 +34,8 @@ body {
   align-content: center;
 }
 .logo-blue {
-  max-width: 150px;
-  max-height: 90px;
+  max-width: 12rem;
+  max-height: 5.5rem;
 }
 
 .titulo {
@@ -50,10 +50,15 @@ body {
   flex-wrap: wrap;
   width: 35%;
   justify-content: center;
+  align-content: center;
 }
 
 .bloco-titulo {
+<<<<<<< Updated upstream
   font-size: clamp(1.5rem,2.5vw,3rem);
+=======
+  font-size: 2rem;
+>>>>>>> Stashed changes
   display: grid;
   flex-wrap: wrap;
   justify-content: flex-start;
